@@ -1,0 +1,36 @@
+version: '2'
+
+services:
+  jupyter:
+    restart: always
+    container_name: jupyter
+    image: classtag/data-science-notebook
+    user: root
+    working_dir: /home/${NB_USER}
+    environment:
+      - GRANT_SUDO=yes
+      - NB_USER=${NB_USER}
+      - NB_UID=${NB_UID}
+      - NB_GID=${NB_GID}
+      - CHOWN_HOME=yes
+      - CHOWN_HOME_OPTS=-R
+    ports:
+      - "8888:8888"
+    volumes:
+      - ${NOTE_DIR}:/home/${NB_USER}/nbs
+      - ${DATA_DIR}:/home/${NB_USER}/dat
+      - tensorflow-log-volume:/home/${NB_USER}/tflogs
+    
+  tensorboard:
+    restart: always
+    container_name: tensorboard
+    image: classtag/tensorboard
+    user: root
+    ports:
+      - "6006:6006"
+    volumes:
+      - tensorflow-log-volume:/tflogs/
+
+
+volumes:
+  tensorflow-log-volume:
