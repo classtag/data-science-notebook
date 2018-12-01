@@ -3,6 +3,7 @@
 A light data science notebook docker image build package.
 
 ## How to install ?
+
 ### Docker environment setup
 This repository build on docker-compose, so you have to setup docker-compose environment at first, please seek from google.
 
@@ -17,6 +18,7 @@ This repository build on docker-compose, so you have to setup docker-compose env
 
 ### Jupyter notebook and tensorboard
 - notebook link: http://localhost:8888
+
 It needs a password, you should get from ```head -n 100 /tmp/dsn.log```
 
 - tensorboard link: http://localhost:6006
