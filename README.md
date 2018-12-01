@@ -23,7 +23,7 @@ It needs a password, you should get from ```head -n 100 /tmp/dsn.log```
 
 - tensorboard link: http://localhost:6006
 
-You should write tensorflow log to directory /tflogs, then you can view it on the tensorboard.
+You should write tensorflow log to directory `/tflogs`, then you can view it on the tensorboard.
 
 ### Has installed major packages
 - scikit-learn
