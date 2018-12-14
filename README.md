@@ -1,6 +1,6 @@
-# Data science notebook
+# A python data science notebook docker image
 
-A light data science notebook docker image build package.
+A light python data science notebook docker image build common packages.
 
 ## How to install ?
 
@@ -10,7 +10,7 @@ This repository build on docker-compose, so you have to setup docker-compose env
 ### Setup a data science notebook
 ```base
 
-~ git clone git@github.com:classtag/data-science-notebook.git
+~ git clone git@github.com:classtag/docker-datascientist-notebook.git
 ~ cd data-science-notebook
 ~ ./start.sh
 
